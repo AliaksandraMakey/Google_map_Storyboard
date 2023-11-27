@@ -14,6 +14,12 @@
 		8525624F2AF8C6B600D6AC9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8525624E2AF8C6B600D6AC9D /* Assets.xcassets */; };
 		852562522AF8C6B600D6AC9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852562502AF8C6B600D6AC9D /* LaunchScreen.storyboard */; };
 		8526F9C02B06869B00F1431F /* MapStyleJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526F9BF2B06869B00F1431F /* MapStyleJSON.swift */; };
+		85A27A6A2B0F7C000066DA0F /* DataBaseLocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A692B0F7C000066DA0F /* DataBaseLocationProtocol.swift */; };
+		85A27A6D2B0F7C630066DA0F /* LocationRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A6C2B0F7C630066DA0F /* LocationRealmObject.swift */; };
+		85A27A6F2B0F7C950066DA0F /* PathRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A6E2B0F7C950066DA0F /* PathRealmObject.swift */; };
+		85A27A712B0F7CE80066DA0F /* RealmServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A702B0F7CE80066DA0F /* RealmServise.swift */; };
+		85A27A732B0F7F480066DA0F /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A722B0F7F480066DA0F /* RealmError.swift */; };
+		85FC671E2B0B8E3500775011 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC671D2B0B8E3500775011 /* AuthViewController.swift */; };
 		EFB4EB9D14911DF2E76FAB69 /* Pods_Google_Map_Storyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA3DCFA99620C17C4C2D4C1 /* Pods_Google_Map_Storyboard.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +35,12 @@
 		852562512AF8C6B600D6AC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		852562532AF8C6B600D6AC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8526F9BF2B06869B00F1431F /* MapStyleJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyleJSON.swift; sourceTree = "<group>"; };
+		85A27A692B0F7C000066DA0F /* DataBaseLocationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseLocationProtocol.swift; sourceTree = "<group>"; };
+		85A27A6C2B0F7C630066DA0F /* LocationRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRealmObject.swift; sourceTree = "<group>"; };
+		85A27A6E2B0F7C950066DA0F /* PathRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathRealmObject.swift; sourceTree = "<group>"; };
+		85A27A702B0F7CE80066DA0F /* RealmServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServise.swift; sourceTree = "<group>"; };
+		85A27A722B0F7F480066DA0F /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
+		85FC671D2B0B8E3500775011 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		8E1AF28A53AE24878B1537DC /* Pods-Google_Map_Storyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google_Map_Storyboard.debug.xcconfig"; path = "Target Support Files/Pods-Google_Map_Storyboard/Pods-Google_Map_Storyboard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -52,6 +64,68 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		850F515F2B0F5CCA0091405E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				852562492AF8C6B500D6AC9D /* MapViewController.swift */,
+				85FC671D2B0B8E3500775011 /* AuthViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		850F51602B0F5CF30091405E /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				8526F9BF2B06869B00F1431F /* MapStyleJSON.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		850F51622B0F5DAE0091405E /* App */ = {
+			isa = PBXGroup;
+			children = (
+				852562452AF8C6B500D6AC9D /* AppDelegate.swift */,
+				852562472AF8C6B500D6AC9D /* SceneDelegate.swift */,
+				850F51672B0F5E5F0091405E /* Entity */,
+				850F51682B0F5E6F0091405E /* BusinessLogic */,
+				850F51632B0F5DE60091405E /* Flows */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		850F51632B0F5DE60091405E /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				8525624B2AF8C6B500D6AC9D /* Main.storyboard */,
+				850F515F2B0F5CCA0091405E /* Controllers */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		850F51652B0F5E180091405E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8525624E2AF8C6B600D6AC9D /* Assets.xcassets */,
+				852562502AF8C6B600D6AC9D /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		850F51672B0F5E5F0091405E /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		850F51682B0F5E6F0091405E /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+				85A27A6B2B0F7C290066DA0F /* Realm */,
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
 		852562392AF8C6B500D6AC9D = {
 			isa = PBXGroup;
 			children = (
@@ -73,16 +147,24 @@
 		852562442AF8C6B500D6AC9D /* Google_Map_Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				852562452AF8C6B500D6AC9D /* AppDelegate.swift */,
-				852562472AF8C6B500D6AC9D /* SceneDelegate.swift */,
-				852562492AF8C6B500D6AC9D /* MapViewController.swift */,
-				8526F9BF2B06869B00F1431F /* MapStyleJSON.swift */,
-				8525624B2AF8C6B500D6AC9D /* Main.storyboard */,
-				8525624E2AF8C6B600D6AC9D /* Assets.xcassets */,
-				852562502AF8C6B600D6AC9D /* LaunchScreen.storyboard */,
 				852562532AF8C6B600D6AC9D /* Info.plist */,
+				850F51622B0F5DAE0091405E /* App */,
+				850F51602B0F5CF30091405E /* Core */,
+				850F51652B0F5E180091405E /* Resources */,
 			);
 			path = Google_Map_Storyboard;
+			sourceTree = "<group>";
+		};
+		85A27A6B2B0F7C290066DA0F /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				85A27A692B0F7C000066DA0F /* DataBaseLocationProtocol.swift */,
+				85A27A6E2B0F7C950066DA0F /* PathRealmObject.swift */,
+				85A27A6C2B0F7C630066DA0F /* LocationRealmObject.swift */,
+				85A27A702B0F7CE80066DA0F /* RealmServise.swift */,
+				85A27A722B0F7F480066DA0F /* RealmError.swift */,
+			);
+			path = Realm;
 			sourceTree = "<group>";
 		};
 		E74147FE1644E5C80FD771C0 /* Pods */ = {
@@ -106,6 +188,7 @@
 				8525623F2AF8C6B500D6AC9D /* Frameworks */,
 				852562402AF8C6B500D6AC9D /* Resources */,
 				B72043116D5667A54639949F /* [CP] Copy Pods Resources */,
+				8FBB312889ED286644A53F87 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -185,6 +268,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8FBB312889ED286644A53F87 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google_Map_Storyboard/Pods-Google_Map_Storyboard-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Google_Map_Storyboard/Pods-Google_Map_Storyboard-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Google_Map_Storyboard/Pods-Google_Map_Storyboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B72043116D5667A54639949F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -209,10 +309,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A27A732B0F7F480066DA0F /* RealmError.swift in Sources */,
+				85FC671E2B0B8E3500775011 /* AuthViewController.swift in Sources */,
 				8525624A2AF8C6B500D6AC9D /* MapViewController.swift in Sources */,
+				85A27A712B0F7CE80066DA0F /* RealmServise.swift in Sources */,
+				85A27A6A2B0F7C000066DA0F /* DataBaseLocationProtocol.swift in Sources */,
 				852562462AF8C6B500D6AC9D /* AppDelegate.swift in Sources */,
 				8526F9C02B06869B00F1431F /* MapStyleJSON.swift in Sources */,
+				85A27A6F2B0F7C950066DA0F /* PathRealmObject.swift in Sources */,
 				852562482AF8C6B500D6AC9D /* SceneDelegate.swift in Sources */,
+				85A27A6D2B0F7C630066DA0F /* LocationRealmObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
