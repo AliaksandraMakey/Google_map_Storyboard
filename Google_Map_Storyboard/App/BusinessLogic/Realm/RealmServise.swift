@@ -9,7 +9,8 @@ import Foundation
 import RealmSwift
 import CoreLocation
 
-final public class RealmDataBase: DataBaseLocationProtocol {
+final public class RealmService: DataBaseLocationProtocol, DataBaseAuthProtocol {
+    //MARK: - Properties
     let defaultPathName: String = "default"
 
     private var realm: Realm {
@@ -20,7 +21,7 @@ final public class RealmDataBase: DataBaseLocationProtocol {
             fatalError("Failed to access Realm database: \(error.localizedDescription)")
         }
     }
-
+    //MARK: - Metods
     private func write(writeClosure: () throws -> Void) throws {
         do {
             try realm.write {
@@ -65,6 +66,46 @@ final public class RealmDataBase: DataBaseLocationProtocol {
             }
         } catch {
             throw RealmError.writeError(error: error as NSError)
+        }
+    }
+    
+    func loadUser(login: String) -> User? {
+        guard let userRealm = realm.object(ofType: UserRealmObject.self, forPrimaryKey: login)
+        else { return nil}
+
+        return userRealm.toUser()
+    }
+
+    func saveUser(user: User) {
+
+        do {
+            guard let userRealm = realm.object(ofType: UserRealmObject.self, forPrimaryKey: user.login)
+            else {
+                try realm.write {
+                    realm.add(user.toRealm())
+                }
+                return
+            }
+            userRealm.password = user.password
+            try realm.write {
+                realm.add(userRealm, update: .modified)
+            }
+
+        } catch let error as NSError {
+            print("Could not SaveUser to Realm database: ", error.localizedDescription)
+        }
+
+    }
+
+    func deleteUser(login: String) {
+        do {
+            let objects = realm.objects(UserRealmObject.self)
+
+            try realm.write {
+                realm.delete(objects)
+            }
+        } catch let error as NSError {
+            print("Could not delete object from Realm database: ", error.localizedDescription)
         }
     }
 }

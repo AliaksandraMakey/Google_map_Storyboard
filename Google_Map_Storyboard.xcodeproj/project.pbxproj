@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8506BC852B1DFCCA0058D1D4 /* ShowStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8506BC842B1DFCCA0058D1D4 /* ShowStyle.swift */; };
+		8506BC932B1E2B100058D1D4 /* AuthCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8506BC922B1E2B100058D1D4 /* AuthCoordinator.swift */; };
+		8506BC952B1E2BA40058D1D4 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8506BC942B1E2BA40058D1D4 /* AppCoordinator.swift */; };
+		8506BC972B1E2BD20058D1D4 /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8506BC962B1E2BD20058D1D4 /* MainCoordinator.swift */; };
+		8506BC992B1E2C520058D1D4 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8506BC982B1E2C520058D1D4 /* RegisterViewController.swift */; };
 		852562462AF8C6B500D6AC9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852562452AF8C6B500D6AC9D /* AppDelegate.swift */; };
 		852562482AF8C6B500D6AC9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852562472AF8C6B500D6AC9D /* SceneDelegate.swift */; };
 		8525624A2AF8C6B500D6AC9D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852562492AF8C6B500D6AC9D /* MapViewController.swift */; };
@@ -14,18 +19,36 @@
 		8525624F2AF8C6B600D6AC9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8525624E2AF8C6B600D6AC9D /* Assets.xcassets */; };
 		852562522AF8C6B600D6AC9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852562502AF8C6B600D6AC9D /* LaunchScreen.storyboard */; };
 		8526F9C02B06869B00F1431F /* MapStyleJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526F9BF2B06869B00F1431F /* MapStyleJSON.swift */; };
+		854254122B1A06D100E21D4E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854254112B1A06D100E21D4E /* MainViewController.swift */; };
+		85691AED2B19E5B7006D5148 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85691AEC2B19E5B7006D5148 /* Auth.storyboard */; };
+		85691AEF2B19E626006D5148 /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85691AEE2B19E626006D5148 /* ForgotPasswordViewController.swift */; };
+		858A59932B204FC2001643C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A59922B204FC2001643C7 /* User.swift */; };
+		858A59952B205015001643C7 /* UserRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A59942B205015001643C7 /* UserRealmObject.swift */; };
+		858A59972B205081001643C7 /* DataBaseAuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A59962B205081001643C7 /* DataBaseAuthProtocol.swift */; };
 		85A27A6A2B0F7C000066DA0F /* DataBaseLocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A692B0F7C000066DA0F /* DataBaseLocationProtocol.swift */; };
 		85A27A6D2B0F7C630066DA0F /* LocationRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A6C2B0F7C630066DA0F /* LocationRealmObject.swift */; };
 		85A27A6F2B0F7C950066DA0F /* PathRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A6E2B0F7C950066DA0F /* PathRealmObject.swift */; };
 		85A27A712B0F7CE80066DA0F /* RealmServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A702B0F7CE80066DA0F /* RealmServise.swift */; };
 		85A27A732B0F7F480066DA0F /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A722B0F7F480066DA0F /* RealmError.swift */; };
-		85FC671E2B0B8E3500775011 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC671D2B0B8E3500775011 /* AuthViewController.swift */; };
+		85ADCD082B1A31830012B284 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD072B1A31830012B284 /* BaseCoordinator.swift */; };
+		85ADCD0A2B1A31B60012B284 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD092B1A31B60012B284 /* BaseRouter.swift */; };
+		85ADCD0C2B1A31E40012B284 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD0B2B1A31E40012B284 /* StoryboardIdentifiable.swift */; };
+		85ADCD0E2B1A31F90012B284 /* ExtensionUIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD0D2B1A31F90012B284 /* ExtensionUIStoryboard.swift */; };
+		85ADCD102B1A32310012B284 /* ExtensionUIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD0F2B1A32310012B284 /* ExtensionUIWindow.swift */; };
+		85ADCD122B1A32720012B284 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD112B1A32720012B284 /* AuthRouter.swift */; };
+		85ADCD152B1A33120012B284 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD142B1A33120012B284 /* UserManager.swift */; };
+		85FC671E2B0B8E3500775011 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85FC671D2B0B8E3500775011 /* LoginViewController.swift */; };
 		EFB4EB9D14911DF2E76FAB69 /* Pods_Google_Map_Storyboard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3CA3DCFA99620C17C4C2D4C1 /* Pods_Google_Map_Storyboard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		033E9B750FC1C6FA43334C1A /* Pods-Google_Map_Storyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google_Map_Storyboard.release.xcconfig"; path = "Target Support Files/Pods-Google_Map_Storyboard/Pods-Google_Map_Storyboard.release.xcconfig"; sourceTree = "<group>"; };
 		3CA3DCFA99620C17C4C2D4C1 /* Pods_Google_Map_Storyboard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Google_Map_Storyboard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8506BC842B1DFCCA0058D1D4 /* ShowStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowStyle.swift; sourceTree = "<group>"; };
+		8506BC922B1E2B100058D1D4 /* AuthCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthCoordinator.swift; sourceTree = "<group>"; };
+		8506BC942B1E2BA40058D1D4 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		8506BC962B1E2BD20058D1D4 /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		8506BC982B1E2C520058D1D4 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		852562422AF8C6B500D6AC9D /* Google_Map_Storyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Google_Map_Storyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		852562452AF8C6B500D6AC9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		852562472AF8C6B500D6AC9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -35,12 +58,25 @@
 		852562512AF8C6B600D6AC9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		852562532AF8C6B600D6AC9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8526F9BF2B06869B00F1431F /* MapStyleJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapStyleJSON.swift; sourceTree = "<group>"; };
+		854254112B1A06D100E21D4E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		85691AEC2B19E5B7006D5148 /* Auth.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		85691AEE2B19E626006D5148 /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		858A59922B204FC2001643C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		858A59942B205015001643C7 /* UserRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmObject.swift; sourceTree = "<group>"; };
+		858A59962B205081001643C7 /* DataBaseAuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseAuthProtocol.swift; sourceTree = "<group>"; };
 		85A27A692B0F7C000066DA0F /* DataBaseLocationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseLocationProtocol.swift; sourceTree = "<group>"; };
 		85A27A6C2B0F7C630066DA0F /* LocationRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRealmObject.swift; sourceTree = "<group>"; };
 		85A27A6E2B0F7C950066DA0F /* PathRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathRealmObject.swift; sourceTree = "<group>"; };
 		85A27A702B0F7CE80066DA0F /* RealmServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServise.swift; sourceTree = "<group>"; };
 		85A27A722B0F7F480066DA0F /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
-		85FC671D2B0B8E3500775011 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		85ADCD072B1A31830012B284 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		85ADCD092B1A31B60012B284 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		85ADCD0B2B1A31E40012B284 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
+		85ADCD0D2B1A31F90012B284 /* ExtensionUIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIStoryboard.swift; sourceTree = "<group>"; };
+		85ADCD0F2B1A32310012B284 /* ExtensionUIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIWindow.swift; sourceTree = "<group>"; };
+		85ADCD112B1A32720012B284 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
+		85ADCD142B1A33120012B284 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		85FC671D2B0B8E3500775011 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8E1AF28A53AE24878B1537DC /* Pods-Google_Map_Storyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Google_Map_Storyboard.debug.xcconfig"; path = "Target Support Files/Pods-Google_Map_Storyboard/Pods-Google_Map_Storyboard.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,19 +100,35 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		850F515F2B0F5CCA0091405E /* Controllers */ = {
+		8506BC832B1DFCBE0058D1D4 /* Routers */ = {
 			isa = PBXGroup;
 			children = (
-				852562492AF8C6B500D6AC9D /* MapViewController.swift */,
-				85FC671D2B0B8E3500775011 /* AuthViewController.swift */,
+				85ADCD112B1A32720012B284 /* AuthRouter.swift */,
+				85ADCD092B1A31B60012B284 /* BaseRouter.swift */,
 			);
-			path = Controllers;
+			path = Routers;
+			sourceTree = "<group>";
+		};
+		850F515F2B0F5CCA0091405E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				8506BC962B1E2BD20058D1D4 /* MainCoordinator.swift */,
+				8525624B2AF8C6B500D6AC9D /* Main.storyboard */,
+				852562492AF8C6B500D6AC9D /* MapViewController.swift */,
+				854254112B1A06D100E21D4E /* MainViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		850F51602B0F5CF30091405E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				858A59A22B2052D2001643C7 /* Coordinators */,
+				858A59912B204D0C001643C7 /* Storyboard */,
+				8506BC832B1DFCBE0058D1D4 /* Routers */,
 				8526F9BF2B06869B00F1431F /* MapStyleJSON.swift */,
+				85ADCD0F2B1A32310012B284 /* ExtensionUIWindow.swift */,
+				8506BC842B1DFCCA0058D1D4 /* ShowStyle.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -86,7 +138,6 @@
 			children = (
 				852562452AF8C6B500D6AC9D /* AppDelegate.swift */,
 				852562472AF8C6B500D6AC9D /* SceneDelegate.swift */,
-				850F51672B0F5E5F0091405E /* Entity */,
 				850F51682B0F5E6F0091405E /* BusinessLogic */,
 				850F51632B0F5DE60091405E /* Flows */,
 			);
@@ -96,8 +147,9 @@
 		850F51632B0F5DE60091405E /* Flows */ = {
 			isa = PBXGroup;
 			children = (
-				8525624B2AF8C6B500D6AC9D /* Main.storyboard */,
-				850F515F2B0F5CCA0091405E /* Controllers */,
+				85ADCD132B1A33080012B284 /* User */,
+				85691AEB2B19E4CE006D5148 /* Auth */,
+				850F515F2B0F5CCA0091405E /* Main */,
 			);
 			path = Flows;
 			sourceTree = "<group>";
@@ -106,16 +158,10 @@
 			isa = PBXGroup;
 			children = (
 				8525624E2AF8C6B600D6AC9D /* Assets.xcassets */,
+				852562532AF8C6B600D6AC9D /* Info.plist */,
 				852562502AF8C6B600D6AC9D /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		850F51672B0F5E5F0091405E /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Entity;
 			sourceTree = "<group>";
 		};
 		850F51682B0F5E6F0091405E /* BusinessLogic */ = {
@@ -147,7 +193,6 @@
 		852562442AF8C6B500D6AC9D /* Google_Map_Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				852562532AF8C6B600D6AC9D /* Info.plist */,
 				850F51622B0F5DAE0091405E /* App */,
 				850F51602B0F5CF30091405E /* Core */,
 				850F51652B0F5E180091405E /* Resources */,
@@ -155,16 +200,73 @@
 			path = Google_Map_Storyboard;
 			sourceTree = "<group>";
 		};
+		85691AEB2B19E4CE006D5148 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				8506BC922B1E2B100058D1D4 /* AuthCoordinator.swift */,
+				85691AEC2B19E5B7006D5148 /* Auth.storyboard */,
+				85FC671D2B0B8E3500775011 /* LoginViewController.swift */,
+				85691AEE2B19E626006D5148 /* ForgotPasswordViewController.swift */,
+				8506BC982B1E2C520058D1D4 /* RegisterViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		858A59912B204D0C001643C7 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				85ADCD0B2B1A31E40012B284 /* StoryboardIdentifiable.swift */,
+				85ADCD0D2B1A31F90012B284 /* ExtensionUIStoryboard.swift */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		858A59982B205092001643C7 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				858A59962B205081001643C7 /* DataBaseAuthProtocol.swift */,
+				85A27A692B0F7C000066DA0F /* DataBaseLocationProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		858A59992B2050A0001643C7 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				858A59942B205015001643C7 /* UserRealmObject.swift */,
+				85A27A6C2B0F7C630066DA0F /* LocationRealmObject.swift */,
+				85A27A6E2B0F7C950066DA0F /* PathRealmObject.swift */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		858A59A22B2052D2001643C7 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				8506BC942B1E2BA40058D1D4 /* AppCoordinator.swift */,
+				85ADCD072B1A31830012B284 /* BaseCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		85A27A6B2B0F7C290066DA0F /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				85A27A692B0F7C000066DA0F /* DataBaseLocationProtocol.swift */,
-				85A27A6E2B0F7C950066DA0F /* PathRealmObject.swift */,
-				85A27A6C2B0F7C630066DA0F /* LocationRealmObject.swift */,
-				85A27A702B0F7CE80066DA0F /* RealmServise.swift */,
 				85A27A722B0F7F480066DA0F /* RealmError.swift */,
+				85A27A702B0F7CE80066DA0F /* RealmServise.swift */,
+				858A59992B2050A0001643C7 /* Objects */,
+				858A59982B205092001643C7 /* Protocols */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		85ADCD132B1A33080012B284 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				858A59922B204FC2001643C7 /* User.swift */,
+				85ADCD142B1A33120012B284 /* UserManager.swift */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		E74147FE1644E5C80FD771C0 /* Pods */ = {
@@ -237,6 +339,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85691AED2B19E5B7006D5148 /* Auth.storyboard in Resources */,
 				852562522AF8C6B600D6AC9D /* LaunchScreen.storyboard in Resources */,
 				8525624F2AF8C6B600D6AC9D /* Assets.xcassets in Resources */,
 				8525624D2AF8C6B500D6AC9D /* Main.storyboard in Resources */,
@@ -309,16 +412,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8506BC952B1E2BA40058D1D4 /* AppCoordinator.swift in Sources */,
 				85A27A732B0F7F480066DA0F /* RealmError.swift in Sources */,
-				85FC671E2B0B8E3500775011 /* AuthViewController.swift in Sources */,
+				85FC671E2B0B8E3500775011 /* LoginViewController.swift in Sources */,
+				8506BC992B1E2C520058D1D4 /* RegisterViewController.swift in Sources */,
+				85ADCD152B1A33120012B284 /* UserManager.swift in Sources */,
+				85ADCD082B1A31830012B284 /* BaseCoordinator.swift in Sources */,
+				8506BC932B1E2B100058D1D4 /* AuthCoordinator.swift in Sources */,
+				85691AEF2B19E626006D5148 /* ForgotPasswordViewController.swift in Sources */,
+				85ADCD0E2B1A31F90012B284 /* ExtensionUIStoryboard.swift in Sources */,
+				858A59952B205015001643C7 /* UserRealmObject.swift in Sources */,
+				8506BC972B1E2BD20058D1D4 /* MainCoordinator.swift in Sources */,
+				854254122B1A06D100E21D4E /* MainViewController.swift in Sources */,
 				8525624A2AF8C6B500D6AC9D /* MapViewController.swift in Sources */,
+				8506BC852B1DFCCA0058D1D4 /* ShowStyle.swift in Sources */,
 				85A27A712B0F7CE80066DA0F /* RealmServise.swift in Sources */,
 				85A27A6A2B0F7C000066DA0F /* DataBaseLocationProtocol.swift in Sources */,
 				852562462AF8C6B500D6AC9D /* AppDelegate.swift in Sources */,
+				858A59932B204FC2001643C7 /* User.swift in Sources */,
+				85ADCD0A2B1A31B60012B284 /* BaseRouter.swift in Sources */,
+				85ADCD102B1A32310012B284 /* ExtensionUIWindow.swift in Sources */,
 				8526F9C02B06869B00F1431F /* MapStyleJSON.swift in Sources */,
+				858A59972B205081001643C7 /* DataBaseAuthProtocol.swift in Sources */,
 				85A27A6F2B0F7C950066DA0F /* PathRealmObject.swift in Sources */,
 				852562482AF8C6B500D6AC9D /* SceneDelegate.swift in Sources */,
 				85A27A6D2B0F7C630066DA0F /* LocationRealmObject.swift in Sources */,
+				85ADCD122B1A32720012B284 /* AuthRouter.swift in Sources */,
+				85ADCD0C2B1A31E40012B284 /* StoryboardIdentifiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -473,11 +593,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LFLMJ46Z7V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Google_Map_Storyboard/Info.plist;
+				INFOPLIST_FILE = Google_Map_Storyboard/Resources/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -503,11 +625,13 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = LFLMJ46Z7V;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Google_Map_Storyboard/Info.plist;
+				INFOPLIST_FILE = Google_Map_Storyboard/Resources/Info.plist;
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";
+				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIMainStoryboardFile = Auth;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

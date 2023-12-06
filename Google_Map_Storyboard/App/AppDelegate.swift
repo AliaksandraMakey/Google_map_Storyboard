@@ -15,7 +15,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Setting provide APIKey for GoogleMaps
-        GMSServices.provideAPIKey("key")
+        GMSServices.provideAPIKey("AIzaSyBWtKY9fFUzDyBKR5U0HTjT7JEB3mJIeKQ")
+        
 #if DEBUG
         print(Realm.Configuration.defaultConfiguration.fileURL ?? "Realm eror")
 #endif

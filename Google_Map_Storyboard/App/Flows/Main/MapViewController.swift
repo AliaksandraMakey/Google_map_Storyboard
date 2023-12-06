@@ -17,7 +17,7 @@ class MapViewController: UIViewController {
     lazy var route = GMSPolyline()
     lazy var routePath = GMSMutablePath()
     lazy var locationManager = CLLocationManager()
-    lazy var dataBase: DataBaseLocationProtocol = RealmDataBase()
+    lazy var dataBase: DataBaseLocationProtocol = RealmService()
     
     @IBOutlet weak var trackButton: UIButton!
     private var trackLocation = false
