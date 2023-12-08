@@ -17,21 +17,21 @@ final class AuthCoordinator: BaseCoordinator {
         let viewController = UIStoryboard(name: "Auth", bundle: nil)
             .instantiateViewController(LoginViewController.self)
 
-        viewController.onAuthSucces = { [weak self] username in
-            self?.onFinishFlow?(username)
+        viewController.onAuthSucces = { [weak self] login in
+            self?.onFinishFlow?(login)
         }
 
         viewController.onRecoveryAction = { [weak self] in
             self?.showRecovery()
         }
 
-        viewController.onRegistationAction = {[weak self] username in
-            self?.showRegistration(loginName: username)
+        viewController.onRegistationAction = {[weak self] login in
+            self?.showRegistration(loginName: login)
         }
 
-        let navController = UINavigationController(rootViewController: viewController)
-        setAsRoot(navController)
-        self.navigationController = navController
+        let navigationController = UINavigationController(rootViewController: viewController)
+        setAsRoot(navigationController)
+        self.navigationController = navigationController
     }
 
     func showRecovery() {

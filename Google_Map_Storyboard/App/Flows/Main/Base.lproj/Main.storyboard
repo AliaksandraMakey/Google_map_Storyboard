@@ -11,7 +11,7 @@
         <!--Main View Controller-->
         <scene sceneID="XFe-J7-x8V">
             <objects>
-                <viewController id="tq3-fy-0Me" customClass="MainViewController" customModule="Google_Map_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainViewController" id="tq3-fy-0Me" customClass="MainViewController" customModule="Google_Map_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iZt-cx-Xg1">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

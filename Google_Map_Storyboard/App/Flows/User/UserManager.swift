@@ -45,10 +45,3 @@ final class UserManager {
     private init() {}
     
 }
-
-extension UserManager {
-    enum Constants {
-        static let login = "mak"
-        static let password = "123456"
-    }
-}

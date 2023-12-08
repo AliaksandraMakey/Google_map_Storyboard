@@ -88,6 +88,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="1wO-03-rHP"/>
                     <connections>
+                        <outlet property="loginButton" destination="gs4-3E-OOr" id="v3b-0i-zam"/>
                         <outlet property="loginTextField" destination="WgU-lJ-OSd" id="OHX-TW-LAE"/>
                         <outlet property="passwordTextField" destination="m5F-Ek-Baj" id="7Wi-FJ-6Da"/>
                     </connections>

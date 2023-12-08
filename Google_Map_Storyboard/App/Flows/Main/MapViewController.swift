@@ -7,28 +7,33 @@
 
 import UIKit
 import GoogleMaps
+import RxSwift
 
 class MapViewController: UIViewController {
     //MARK: - Properties
-    var userCoordinates = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-    //    let coordinates = CLLocationCoordinate2D(latitude: 37.34033264974476, longitude: -122.06892632102273)
+//    var userCoordinates = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+        var userCoordinates = CLLocationCoordinate2D(latitude: 37.34033264974476, longitude: -122.06892632102273)
     var marker: GMSMarker?
     var geoCoder: CLGeocoder?
     lazy var route = GMSPolyline()
     lazy var routePath = GMSMutablePath()
-    lazy var locationManager = CLLocationManager()
+    private let locationManager = LocationManager.instance
     lazy var dataBase: DataBaseLocationProtocol = RealmService()
-    
-    @IBOutlet weak var trackButton: UIButton!
+    private var currentLocation: CLLocationCoordinate2D?
     private var trackLocation = false
+    private let disposeBag = DisposeBag()
+    
     //MARK: - UI components
+    @IBOutlet weak var trackButton: UIButton!
     @IBOutlet weak var mapView: GMSMapView!
+    
     //MARK: - Life cicle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureMap()
         configureLocationManager()
     }
+    
     //MARK: - Setup UI
     private func configureMap() {
         let camera = GMSCameraPosition.camera(withTarget: userCoordinates, zoom: 15)
@@ -41,20 +46,7 @@ class MapViewController: UIViewController {
         configureMapStyle()
         mapView.delegate = self
     }
-    private func configureLocationManager() {
-        locationManager = CLLocationManager()
-        locationManager.delegate = self
-        // разрешение юзера на отслеживание локации
-        if locationManager.authorizationStatus == .notDetermined {
-            locationManager.requestWhenInUseAuthorization()
-        }
-        //получение координат юзера в BackgroundMode
-        locationManager.allowsBackgroundLocationUpdates = true
-        locationManager.pausesLocationUpdatesAutomatically = false
-        locationManager.showsBackgroundLocationIndicator = true
-        locationManager.startMonitoringSignificantLocationChanges()
-        locationManager.requestAlwaysAuthorization()
-    }
+  
     //MARK: - Action
     @IBAction func addMarkerDidTap(_ sender: Any) {
         if marker == nil {
@@ -84,7 +76,7 @@ class MapViewController: UIViewController {
         }
     }
     @IBAction func showCurrentLocation(_ sender: Any) {
-        guard let currentLocation = locationManager.location?.coordinate else { return }
+        guard let currentLocation = currentLocation else { return }
                 let camera = GMSCameraPosition.camera(withTarget: currentLocation, zoom: 17)
                 mapView.animate(to: camera)
     }
@@ -164,12 +156,52 @@ class MapViewController: UIViewController {
         routePath.add(coordinate)
         route.path = routePath
     }
+    private func checkLocationStatus(status: CLAuthorizationStatus) {
+           print("Location status \(status)")
+           switch status {
+           case .notDetermined:
+               self.locationManager.requestAuthorithation()
+           case .restricted, .denied:
+               print("Location access denied")
+           case .authorizedAlways, .authorizedWhenInUse:
+               break
+           @unknown default:
+               break
+           }
+       }
+
+       private func configureLocationManager() {
+           locationManager
+               .authorithationStatus
+               .bind { [weak self] status in
+                   self?.checkLocationStatus(status: status)
+                   }
+               .disposed(by: disposeBag)
+
+           locationManager
+               .location
+               .bind { [weak self] location in
+                   print("Location \(location)")
+                   self?.updateTrack(location: location)
+                   self?.currentLocation = location
+               }
+               .disposed(by: disposeBag)
+       }
+
+    private func updateTrack(location: CLLocationCoordinate2D) {
+        if trackLocation {
+            addPointToTrack(at: location)
+            let camera = GMSCameraPosition.camera(withTarget: location, zoom: 15)
+            mapView.animate(to: camera)
+            mapView.camera = camera
+        }
+    }
 }
 //MARK: - GMSMapViewDelegate
 extension MapViewController: GMSMapViewDelegate {
     
     func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
-        guard let coordinate = locationManager.location?.coordinate
+        guard let coordinate = currentLocation
         else { return false }
         
         let camera = GMSCameraPosition.camera(withTarget: coordinate, zoom: 14)
@@ -190,22 +222,7 @@ extension MapViewController: GMSMapViewDelegate {
     }
 }
 
-//MARK: - GMSMapViewDelegate
-extension MapViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        guard let location = locations.last else { return }
-        if trackLocation {
-            addPointToTrack(at: location.coordinate)
-            let position = GMSCameraPosition(target: location.coordinate, zoom: 15)
-            mapView.animate(to: position)
-        }
-        userCoordinates = location.coordinate
-    }
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
-        print(error)
-    }
-}
-
+//MARK: - Allert
 extension MapViewController {
     
     func showStopTrackingAlert() {
@@ -221,8 +238,3 @@ extension MapViewController {
         present(stopTrackingAlert, animated: true, completion: nil)
     }
 }
-
-
-
-
-

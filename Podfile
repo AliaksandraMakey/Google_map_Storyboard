@@ -8,6 +8,8 @@ target 'Google_Map_Storyboard' do
   # Pods for Google_Map_Storyboard
   pod 'GoogleMaps'
   pod 'RealmSwift'
+  pod 'RxSwift'
+  pod 'RxCocoa'
 
 
 end
