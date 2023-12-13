@@ -12,6 +12,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
     
     let appCoordinator = AppCoordinator()
+    let appDelegate = UIApplication.shared.delegate as? AppDelegate
     
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -37,6 +38,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func sceneWillResignActive(_ scene: UIScene) {
         window?.addBlur(style: .extraLight)
+        appDelegate?.notifications.scheduleNotification()
         print(#function)
     }
     

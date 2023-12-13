@@ -18,16 +18,26 @@ final class UserManager {
         return currentUser != nil
     }
     //MARK: - Metods
-    func authorize(login: String, password: String) -> Bool {
-        guard let user = dataBase.loadUser(login: login) else {
-            return false
+    func authorize(login: String, password: String, completion: @escaping (Bool) -> Void) {
+        DispatchQueue.global().async {
+            guard let user = self.dataBase.loadUser(login: login) else {
+                DispatchQueue.main.async {
+                    completion(false)
+                }
+                return
+            }
+            guard login == user.login, password == user.password else {
+                DispatchQueue.main.async {
+                    completion(false)
+                }
+                return
+            }
+            
+            DispatchQueue.main.async {
+                self.currentUser = user
+                completion(true)
+            }
         }
-        guard login == user.login,
-              password == user.password else {
-            return false
-        }
-        self.currentUser = user
-        return true
     }
     
     public func loadUser(login: String) -> User? {

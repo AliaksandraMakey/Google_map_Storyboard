@@ -23,16 +23,20 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLoginBindings()
-  
+        
     }
     //MARK: - Action
     @IBAction func loginTap(_ sender: Any) {
         guard let login = loginTextField.text,
               let password = passwordTextField.text else { return }
-        onAuthSucces?(login)
-        if UserManager.instance.authorize(login: login, password: password) {
-                  onAuthSucces?(login)
-              }
+//        onAuthSucces?(login)
+        UserManager.instance.authorize(login: login, password: password) { success in
+            if success {
+                self.onAuthSucces?(login)
+            } else {
+         print("login and password doesn't mutch")
+            }
+        }
     }
     @IBAction func showForgotPasswordViewTap(_ sender: Any) {
         onRecoveryAction?()
@@ -52,19 +56,19 @@ class LoginViewController: UIViewController {
                 !userName.isEmpty && password.count >= 6
             }
             .bind(to: loginButton.rx.isEnabled)
-//            .subscribe{[weak self] isEnabled in
-//                self?.loginButton.isEnabled = isEnabled
-//            }
+        //            .subscribe{[weak self] isEnabled in
+        //                self?.loginButton.isEnabled = isEnabled
+        //            }
             .disposed(by: disposeBag)
     }
-//    func configureLoginBindings(){
-//        Observable.combineLatest(loginTextField.rx.text.orEmpty, passwordTextField.rx.text.orEmpty)
-//              .map { (login, password) in
-//                  !login.isEmpty && !password.isEmpty
-//              }
-//              .subscribe{[weak self] isEnabled in
-//                  self?.loginButton.isEnabled = isEnabled
-//              }
-//              .disposed(by: disposeBag)
-//    }
+    //    func configureLoginBindings(){
+    //        Observable.combineLatest(loginTextField.rx.text.orEmpty, passwordTextField.rx.text.orEmpty)
+    //              .map { (login, password) in
+    //                  !login.isEmpty && !password.isEmpty
+    //              }
+    //              .subscribe{[weak self] isEnabled in
+    //                  self?.loginButton.isEnabled = isEnabled
+    //              }
+    //              .disposed(by: disposeBag)
+    //    }
 }

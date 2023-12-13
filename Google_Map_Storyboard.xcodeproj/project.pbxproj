@@ -31,6 +31,7 @@
 		85A27A6F2B0F7C950066DA0F /* PathRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A6E2B0F7C950066DA0F /* PathRealmObject.swift */; };
 		85A27A712B0F7CE80066DA0F /* RealmServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A702B0F7CE80066DA0F /* RealmServise.swift */; };
 		85A27A732B0F7F480066DA0F /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A722B0F7F480066DA0F /* RealmError.swift */; };
+		85A84A292B2A09CC00C75D00 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A84A282B2A09CC00C75D00 /* Notifications.swift */; };
 		85ADCD082B1A31830012B284 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD072B1A31830012B284 /* BaseCoordinator.swift */; };
 		85ADCD0A2B1A31B60012B284 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD092B1A31B60012B284 /* BaseRouter.swift */; };
 		85ADCD0C2B1A31E40012B284 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD0B2B1A31E40012B284 /* StoryboardIdentifiable.swift */; };
@@ -72,6 +73,7 @@
 		85A27A6E2B0F7C950066DA0F /* PathRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathRealmObject.swift; sourceTree = "<group>"; };
 		85A27A702B0F7CE80066DA0F /* RealmServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServise.swift; sourceTree = "<group>"; };
 		85A27A722B0F7F480066DA0F /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
+		85A84A282B2A09CC00C75D00 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		85ADCD072B1A31830012B284 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		85ADCD092B1A31B60012B284 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		85ADCD0B2B1A31E40012B284 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 				858A59A32B20ADE4001643C7 /* ExtensionUIView.swift */,
 				85ADCD0F2B1A32310012B284 /* ExtensionUIWindow.swift */,
 				8506BC842B1DFCCA0058D1D4 /* ShowStyle.swift */,
+				85A84A282B2A09CC00C75D00 /* Notifications.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -418,6 +421,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A84A292B2A09CC00C75D00 /* Notifications.swift in Sources */,
 				8506BC952B1E2BA40058D1D4 /* AppCoordinator.swift in Sources */,
 				85A27A732B0F7F480066DA0F /* RealmError.swift in Sources */,
 				858A59A42B20ADE4001643C7 /* ExtensionUIView.swift in Sources */,

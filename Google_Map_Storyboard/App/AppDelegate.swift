@@ -11,8 +11,10 @@ import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    var window: UIWindow?
     
+    var window: UIWindow?
+    let notifications = Notifications()
+
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Setting provide APIKey for GoogleMaps
         GMSServices.provideAPIKey("key")
@@ -20,6 +22,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 #if DEBUG
         print(Realm.Configuration.defaultConfiguration.fileURL ?? "Realm eror")
 #endif
+        notifications.requestAutorization()
+        notifications.notificationCenter.delegate = notifications
         return true
     }
     
