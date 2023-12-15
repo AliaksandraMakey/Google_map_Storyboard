@@ -11,8 +11,8 @@ import RxSwift
 
 class MapViewController: UIViewController {
     //MARK: - Properties
-//    var userCoordinates = CLLocationCoordinate2D(latitude: 0, longitude: 0)
-        var userCoordinates = CLLocationCoordinate2D(latitude: 37.34033264974476, longitude: -122.06892632102273)
+    //    var userCoordinates = CLLocationCoordinate2D(latitude: 0, longitude: 0)
+    var userCoordinates = CLLocationCoordinate2D(latitude: 37.34033264974476, longitude: -122.06892632102273)
     var marker: GMSMarker?
     var geoCoder: CLGeocoder?
     lazy var route = GMSPolyline()
@@ -22,6 +22,10 @@ class MapViewController: UIViewController {
     private var currentLocation: CLLocationCoordinate2D?
     private var trackLocation = false
     private let disposeBag = DisposeBag()
+
+    private let userMarkerDefaultImage = FilesManager.defaultUserMarkerImage
+    private var userMarkerImage: UIImage?
+    private var userMarker: GMSMarker?
     
     //MARK: - UI components
     @IBOutlet weak var trackButton: UIButton!
@@ -44,9 +48,10 @@ class MapViewController: UIViewController {
         //передвижение камеры с изменением локации пользователя
         mapView.isMyLocationEnabled = true
         configureMapStyle()
+        userMarkerImage = FilesManager.loadImageFromDiskWith(fileName: FilesManager.userImageName)
         mapView.delegate = self
     }
-  
+    
     //MARK: - Action
     @IBAction func addMarkerDidTap(_ sender: Any) {
         if marker == nil {
@@ -77,8 +82,8 @@ class MapViewController: UIViewController {
     }
     @IBAction func showCurrentLocation(_ sender: Any) {
         guard let currentLocation = currentLocation else { return }
-                let camera = GMSCameraPosition.camera(withTarget: currentLocation, zoom: 17)
-                mapView.animate(to: camera)
+        let camera = GMSCameraPosition.camera(withTarget: currentLocation, zoom: 17)
+        mapView.animate(to: camera)
     }
     
     private func clearRoute() {
@@ -95,6 +100,20 @@ class MapViewController: UIViewController {
         marker.snippet = snippet
         marker.map = mapView
     }
+    private func setUserMarker(at coordinate: CLLocationCoordinate2D) {
+        let imageView: UIImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 50, height: 50))
+        
+        let marker = userMarker ?? GMSMarker(position: coordinate)
+        let imageToUse = userMarkerImage ?? userMarkerDefaultImage
+        
+        imageView.image = imageToUse
+        imageView.rounded()
+        marker.position = coordinate
+        marker.iconView = imageView
+        marker.map = mapView
+        self.userMarker = marker
+    }
+
     private func removeMarker() {
         marker?.map = nil
         marker = nil
@@ -157,40 +176,40 @@ class MapViewController: UIViewController {
         route.path = routePath
     }
     private func checkLocationStatus(status: CLAuthorizationStatus) {
-           print("Location status \(status)")
-           switch status {
-           case .notDetermined:
-               self.locationManager.requestAuthorithation()
-           case .restricted, .denied:
-               print("Location access denied")
-           case .authorizedAlways, .authorizedWhenInUse:
-               break
-           @unknown default:
-               break
-           }
-       }
-
-       private func configureLocationManager() {
-           locationManager
-               .authorithationStatus
-               .bind { [weak self] status in
-                   self?.checkLocationStatus(status: status)
-                   }
-               .disposed(by: disposeBag)
-
-           locationManager
-               .location
-               .bind { [weak self] location in
-                   print("Location \(location)")
-                   self?.updateTrack(location: location)
-                   self?.currentLocation = location
-               }
-               .disposed(by: disposeBag)
-       }
-
+        print("Location status \(status)")
+        switch status {
+        case .notDetermined:
+            self.locationManager.requestAuthorithation()
+        case .restricted, .denied:
+            print("Location access denied")
+        case .authorizedAlways, .authorizedWhenInUse:
+            break
+        @unknown default:
+            break
+        }
+    }
+    private func configureLocationManager() {
+        locationManager
+            .authorithationStatus
+            .bind { [weak self] status in
+                self?.checkLocationStatus(status: status)
+            }
+            .disposed(by: disposeBag)
+        
+        locationManager
+            .location
+            .bind { [weak self] location in
+                print("Location \(location)")
+                self?.updateTrack(location: location)
+                self?.currentLocation = location
+            }
+            .disposed(by: disposeBag)
+    }
+    
     private func updateTrack(location: CLLocationCoordinate2D) {
         if trackLocation {
             addPointToTrack(at: location)
+            setUserMarker(at: location)
             let camera = GMSCameraPosition.camera(withTarget: location, zoom: 15)
             mapView.animate(to: camera)
             mapView.camera = camera

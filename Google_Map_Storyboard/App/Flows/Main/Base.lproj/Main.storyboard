@@ -59,15 +59,29 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FLk-wu-Fdl">
+                                <rect key="frame" x="155.66666666666666" y="501" width="82" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Uzm-mt-sj5"/>
+                                    <constraint firstAttribute="width" constant="82" id="fOU-aH-hW0"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Selfi"/>
+                                <connections>
+                                    <action selector="takePicturesAction:" destination="tq3-fy-0Me" eventType="touchUpInside" id="jfZ-l1-b9r"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vbc-6O-8Mc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="FLk-wu-Fdl" firstAttribute="centerX" secondItem="vbc-6O-8Mc" secondAttribute="centerX" id="6G1-qe-zut"/>
                             <constraint firstItem="VI5-cJ-bWO" firstAttribute="baseline" secondItem="5xq-qe-RqU" secondAttribute="baseline" id="97T-Fn-2U6"/>
                             <constraint firstItem="VI5-cJ-bWO" firstAttribute="centerX" secondItem="5xq-qe-RqU" secondAttribute="centerX" id="B5M-gt-atL"/>
                             <constraint firstItem="L5O-zt-MP7" firstAttribute="centerX" secondItem="vbc-6O-8Mc" secondAttribute="centerX" id="Hby-k5-cxz"/>
                             <constraint firstItem="L5O-zt-MP7" firstAttribute="top" secondItem="vbc-6O-8Mc" secondAttribute="top" constant="227" id="K7y-la-Hay"/>
                             <constraint firstItem="int-jQ-D98" firstAttribute="top" secondItem="L5O-zt-MP7" secondAttribute="bottom" constant="27" id="Ml2-kJ-pge"/>
+                            <constraint firstItem="FLk-wu-Fdl" firstAttribute="top" secondItem="5xq-qe-RqU" secondAttribute="bottom" constant="41" id="NVX-vV-lvM"/>
                             <constraint firstItem="5xq-qe-RqU" firstAttribute="top" secondItem="int-jQ-D98" secondAttribute="bottom" constant="37" id="PGS-Oq-na9"/>
                             <constraint firstItem="5xq-qe-RqU" firstAttribute="centerX" secondItem="vbc-6O-8Mc" secondAttribute="centerX" id="XiW-ah-tLG"/>
                             <constraint firstItem="int-jQ-D98" firstAttribute="centerX" secondItem="vbc-6O-8Mc" secondAttribute="centerX" id="ZdK-lX-OM6"/>
@@ -81,6 +95,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hpQ-09-asS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="301.52671755725191" y="3.5211267605633805"/>
+        </scene>
+        <!--Edit Photo View Controller-->
+        <scene sceneID="2Gb-U1-iNm">
+            <objects>
+                <viewController storyboardIdentifier="EditPhotoViewController" id="URP-kt-vIe" customClass="EditPhotoViewController" customModule="Google_Map_Storyboard" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MS3-GB-4c2">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7Ki-eA-SUh">
+                                <rect key="frame" x="71.666666666666686" y="195" width="250" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="WfQ-TJ-QgC"/>
+                                    <constraint firstAttribute="width" constant="250" id="ejd-LR-55J"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="acC-hV-Ktq">
+                                <rect key="frame" x="146.66666666666666" y="478" width="100" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Cun-Dk-wQy"/>
+                                    <constraint firstAttribute="width" constant="100" id="xAj-mT-OT1"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Save"/>
+                                <connections>
+                                    <action selector="saveAction:" destination="URP-kt-vIe" eventType="touchUpInside" id="0ZB-Mc-vtE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sVe-fv-08Z"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="acC-hV-Ktq" firstAttribute="top" secondItem="7Ki-eA-SUh" secondAttribute="bottom" constant="33" id="2hl-Iq-nYa"/>
+                            <constraint firstItem="acC-hV-Ktq" firstAttribute="centerX" secondItem="sVe-fv-08Z" secondAttribute="centerX" id="542-Mv-kKQ"/>
+                            <constraint firstItem="7Ki-eA-SUh" firstAttribute="centerX" secondItem="sVe-fv-08Z" secondAttribute="centerX" id="e5r-yF-l6n"/>
+                            <constraint firstItem="7Ki-eA-SUh" firstAttribute="top" secondItem="sVe-fv-08Z" secondAttribute="top" constant="136" id="pJN-Vs-tHL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="7Ki-eA-SUh" id="RD0-eF-twl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ivs-0E-Qa0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="301.52671755725191" y="745.77464788732402"/>
         </scene>
         <!--MapViewController-->
         <scene sceneID="tne-QT-ifu">
@@ -174,10 +233,10 @@
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemGray6Color">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemRedColor">
-            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

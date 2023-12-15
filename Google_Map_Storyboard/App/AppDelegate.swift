@@ -13,7 +13,7 @@ import RealmSwift
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
-    let notifications = Notifications()
+    let notifications = NotificationManager()
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Setting provide APIKey for GoogleMaps

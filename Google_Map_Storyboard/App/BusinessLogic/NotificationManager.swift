@@ -1,5 +1,5 @@
 //
-//  Notifications.swift
+//  NotificationManager.swift
 //  Google_Map_Storyboard
 //
 //  Created by Александра Макей on 13.12.2023.
@@ -8,10 +8,10 @@
 import UIKit
 import UserNotifications
 
-class Notifications: NSObject, UNUserNotificationCenterDelegate {
+class NotificationManager: NSObject, UNUserNotificationCenterDelegate {
 
-    let notificationIdentifire = "Maps Notification"
-    let notifaicationType = "Local Notification"
+    let notificationIdentifire = "MapsNotification"
+    let notifaicationType = "LocalNotification"
     let notificationAfterMinutsInterval: Double = 30
 
     let notificationCenter = UNUserNotificationCenter.current()

@@ -25,18 +25,22 @@
 		858A59932B204FC2001643C7 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A59922B204FC2001643C7 /* User.swift */; };
 		858A59952B205015001643C7 /* UserRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A59942B205015001643C7 /* UserRealmObject.swift */; };
 		858A59972B205081001643C7 /* DataBaseAuthProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A59962B205081001643C7 /* DataBaseAuthProtocol.swift */; };
-		858A59A42B20ADE4001643C7 /* ExtensionUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A59A32B20ADE4001643C7 /* ExtensionUIView.swift */; };
+		858A59A42B20ADE4001643C7 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858A59A32B20ADE4001643C7 /* UIView.swift */; };
 		85A27A6A2B0F7C000066DA0F /* DataBaseLocationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A692B0F7C000066DA0F /* DataBaseLocationProtocol.swift */; };
 		85A27A6D2B0F7C630066DA0F /* LocationRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A6C2B0F7C630066DA0F /* LocationRealmObject.swift */; };
 		85A27A6F2B0F7C950066DA0F /* PathRealmObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A6E2B0F7C950066DA0F /* PathRealmObject.swift */; };
 		85A27A712B0F7CE80066DA0F /* RealmServise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A702B0F7CE80066DA0F /* RealmServise.swift */; };
 		85A27A732B0F7F480066DA0F /* RealmError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A27A722B0F7F480066DA0F /* RealmError.swift */; };
-		85A84A292B2A09CC00C75D00 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A84A282B2A09CC00C75D00 /* Notifications.swift */; };
+		85A84A292B2A09CC00C75D00 /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A84A282B2A09CC00C75D00 /* NotificationManager.swift */; };
+		85A84A2D2B2B1DC200C75D00 /* UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A84A2C2B2B1DC200C75D00 /* UIImageView.swift */; };
+		85A84A2F2B2B1FED00C75D00 /* EditPhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A84A2E2B2B1FED00C75D00 /* EditPhotoViewController.swift */; };
+		85A84A342B2B384500C75D00 /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A84A332B2B384500C75D00 /* UIImage.swift */; };
+		85A84A382B2B3AC800C75D00 /* FilesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A84A372B2B3AC800C75D00 /* FilesManager.swift */; };
 		85ADCD082B1A31830012B284 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD072B1A31830012B284 /* BaseCoordinator.swift */; };
 		85ADCD0A2B1A31B60012B284 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD092B1A31B60012B284 /* BaseRouter.swift */; };
 		85ADCD0C2B1A31E40012B284 /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD0B2B1A31E40012B284 /* StoryboardIdentifiable.swift */; };
 		85ADCD0E2B1A31F90012B284 /* ExtensionUIStoryboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD0D2B1A31F90012B284 /* ExtensionUIStoryboard.swift */; };
-		85ADCD102B1A32310012B284 /* ExtensionUIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD0F2B1A32310012B284 /* ExtensionUIWindow.swift */; };
+		85ADCD102B1A32310012B284 /* UIWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD0F2B1A32310012B284 /* UIWindow.swift */; };
 		85ADCD122B1A32720012B284 /* AuthRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD112B1A32720012B284 /* AuthRouter.swift */; };
 		85ADCD152B1A33120012B284 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85ADCD142B1A33120012B284 /* UserManager.swift */; };
 		85D3E6A02B21FD910023BE26 /*  LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D3E69F2B21FD910023BE26 /*  LocationManager.swift */; };
@@ -67,18 +71,22 @@
 		858A59922B204FC2001643C7 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		858A59942B205015001643C7 /* UserRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRealmObject.swift; sourceTree = "<group>"; };
 		858A59962B205081001643C7 /* DataBaseAuthProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseAuthProtocol.swift; sourceTree = "<group>"; };
-		858A59A32B20ADE4001643C7 /* ExtensionUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIView.swift; sourceTree = "<group>"; };
+		858A59A32B20ADE4001643C7 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		85A27A692B0F7C000066DA0F /* DataBaseLocationProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataBaseLocationProtocol.swift; sourceTree = "<group>"; };
 		85A27A6C2B0F7C630066DA0F /* LocationRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRealmObject.swift; sourceTree = "<group>"; };
 		85A27A6E2B0F7C950066DA0F /* PathRealmObject.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathRealmObject.swift; sourceTree = "<group>"; };
 		85A27A702B0F7CE80066DA0F /* RealmServise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmServise.swift; sourceTree = "<group>"; };
 		85A27A722B0F7F480066DA0F /* RealmError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmError.swift; sourceTree = "<group>"; };
-		85A84A282B2A09CC00C75D00 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		85A84A282B2A09CC00C75D00 /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
+		85A84A2C2B2B1DC200C75D00 /* UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageView.swift; sourceTree = "<group>"; };
+		85A84A2E2B2B1FED00C75D00 /* EditPhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPhotoViewController.swift; sourceTree = "<group>"; };
+		85A84A332B2B384500C75D00 /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
+		85A84A372B2B3AC800C75D00 /* FilesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesManager.swift; sourceTree = "<group>"; };
 		85ADCD072B1A31830012B284 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		85ADCD092B1A31B60012B284 /* BaseRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
 		85ADCD0B2B1A31E40012B284 /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
 		85ADCD0D2B1A31F90012B284 /* ExtensionUIStoryboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIStoryboard.swift; sourceTree = "<group>"; };
-		85ADCD0F2B1A32310012B284 /* ExtensionUIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionUIWindow.swift; sourceTree = "<group>"; };
+		85ADCD0F2B1A32310012B284 /* UIWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIWindow.swift; sourceTree = "<group>"; };
 		85ADCD112B1A32720012B284 /* AuthRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRouter.swift; sourceTree = "<group>"; };
 		85ADCD142B1A33120012B284 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		85D3E69F2B21FD910023BE26 /*  LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " LocationManager.swift"; sourceTree = "<group>"; };
@@ -119,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8506BC962B1E2BD20058D1D4 /* MainCoordinator.swift */,
+				85A84A2E2B2B1FED00C75D00 /* EditPhotoViewController.swift */,
 				8525624B2AF8C6B500D6AC9D /* Main.storyboard */,
 				852562492AF8C6B500D6AC9D /* MapViewController.swift */,
 				854254112B1A06D100E21D4E /* MainViewController.swift */,
@@ -129,14 +138,12 @@
 		850F51602B0F5CF30091405E /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				85A84A362B2B385900C75D00 /* Extensions */,
 				858A59A22B2052D2001643C7 /* Coordinators */,
 				858A59912B204D0C001643C7 /* Storyboard */,
 				8506BC832B1DFCBE0058D1D4 /* Routers */,
 				8526F9BF2B06869B00F1431F /* MapStyleJSON.swift */,
-				858A59A32B20ADE4001643C7 /* ExtensionUIView.swift */,
-				85ADCD0F2B1A32310012B284 /* ExtensionUIWindow.swift */,
 				8506BC842B1DFCCA0058D1D4 /* ShowStyle.swift */,
-				85A84A282B2A09CC00C75D00 /* Notifications.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -177,6 +184,8 @@
 			children = (
 				85A27A6B2B0F7C290066DA0F /* Realm */,
 				85D3E69F2B21FD910023BE26 /*  LocationManager.swift */,
+				85A84A282B2A09CC00C75D00 /* NotificationManager.swift */,
+				85A84A372B2B3AC800C75D00 /* FilesManager.swift */,
 			);
 			path = BusinessLogic;
 			sourceTree = "<group>";
@@ -267,6 +276,17 @@
 				858A59982B205092001643C7 /* Protocols */,
 			);
 			path = Realm;
+			sourceTree = "<group>";
+		};
+		85A84A362B2B385900C75D00 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				858A59A32B20ADE4001643C7 /* UIView.swift */,
+				85ADCD0F2B1A32310012B284 /* UIWindow.swift */,
+				85A84A2C2B2B1DC200C75D00 /* UIImageView.swift */,
+				85A84A332B2B384500C75D00 /* UIImage.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		85ADCD132B1A33080012B284 /* User */ = {
@@ -421,29 +441,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85A84A292B2A09CC00C75D00 /* Notifications.swift in Sources */,
+				85A84A292B2A09CC00C75D00 /* NotificationManager.swift in Sources */,
 				8506BC952B1E2BA40058D1D4 /* AppCoordinator.swift in Sources */,
 				85A27A732B0F7F480066DA0F /* RealmError.swift in Sources */,
-				858A59A42B20ADE4001643C7 /* ExtensionUIView.swift in Sources */,
+				858A59A42B20ADE4001643C7 /* UIView.swift in Sources */,
 				85FC671E2B0B8E3500775011 /* LoginViewController.swift in Sources */,
 				8506BC992B1E2C520058D1D4 /* RegisterViewController.swift in Sources */,
+				85A84A2D2B2B1DC200C75D00 /* UIImageView.swift in Sources */,
+				85A84A2F2B2B1FED00C75D00 /* EditPhotoViewController.swift in Sources */,
 				85ADCD152B1A33120012B284 /* UserManager.swift in Sources */,
 				85ADCD082B1A31830012B284 /* BaseCoordinator.swift in Sources */,
 				8506BC932B1E2B100058D1D4 /* AuthCoordinator.swift in Sources */,
 				85691AEF2B19E626006D5148 /* ForgotPasswordViewController.swift in Sources */,
+				85A84A342B2B384500C75D00 /* UIImage.swift in Sources */,
 				85ADCD0E2B1A31F90012B284 /* ExtensionUIStoryboard.swift in Sources */,
 				858A59952B205015001643C7 /* UserRealmObject.swift in Sources */,
 				8506BC972B1E2BD20058D1D4 /* MainCoordinator.swift in Sources */,
 				854254122B1A06D100E21D4E /* MainViewController.swift in Sources */,
 				8525624A2AF8C6B500D6AC9D /* MapViewController.swift in Sources */,
 				85D3E6A02B21FD910023BE26 /*  LocationManager.swift in Sources */,
+				85A84A382B2B3AC800C75D00 /* FilesManager.swift in Sources */,
 				8506BC852B1DFCCA0058D1D4 /* ShowStyle.swift in Sources */,
 				85A27A712B0F7CE80066DA0F /* RealmServise.swift in Sources */,
 				85A27A6A2B0F7C000066DA0F /* DataBaseLocationProtocol.swift in Sources */,
 				852562462AF8C6B500D6AC9D /* AppDelegate.swift in Sources */,
 				858A59932B204FC2001643C7 /* User.swift in Sources */,
 				85ADCD0A2B1A31B60012B284 /* BaseRouter.swift in Sources */,
-				85ADCD102B1A32310012B284 /* ExtensionUIWindow.swift in Sources */,
+				85ADCD102B1A32310012B284 /* UIWindow.swift in Sources */,
 				8526F9C02B06869B00F1431F /* MapStyleJSON.swift in Sources */,
 				858A59972B205081001643C7 /* DataBaseAuthProtocol.swift in Sources */,
 				85A27A6F2B0F7C950066DA0F /* PathRealmObject.swift in Sources */,
@@ -606,6 +630,7 @@
 				DEVELOPMENT_TEAM = LFLMJ46Z7V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Google_Map_Storyboard/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Для селфи";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";
@@ -638,6 +663,7 @@
 				DEVELOPMENT_TEAM = LFLMJ46Z7V;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Google_Map_Storyboard/Resources/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Для селфи";
 				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";
 				INFOPLIST_KEY_NSLocationAlwaysUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";
 				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "Для определения вашей геолокации нам необходим доступ к вашему местоположению.";

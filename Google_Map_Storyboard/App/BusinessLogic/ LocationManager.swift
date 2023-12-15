@@ -33,7 +33,7 @@ final class LocationManager: NSObject {
         locationManager.allowsBackgroundLocationUpdates = true
         locationManager.showsBackgroundLocationIndicator = true
 
-        locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
+        locationManager.desiredAccuracy = kCLLocationAccuracyHundredMeters
         locationManager.startMonitoringSignificantLocationChanges()
         locationManager.requestAlwaysAuthorization()
     }
